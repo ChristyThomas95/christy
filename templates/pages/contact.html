@@ -1,0 +1,145 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+
+<div class="col-md-9 right-content pd-r0 pd-l0">
+		<!--Contact Tab-->
+		<section id="contact" class="bg-white t-center">
+		    <!--Contact-->
+		    <div class="contact">
+		        <!--Content-->
+		        <div class="content">
+		            <!--Block content-->
+		            <div class="block-content mb-100">
+		                <!--Row-->
+		                <div class="row">
+		                    <div class="col-md-12">
+		                        <div class="main-title">
+		                            <h1 class="mb-20">Contact</h1>
+		                            <h5 class="uppercase">Say Hello</h5>
+		                        </div>
+		                    </div>
+		                </div>
+		                <!--End row-->
+		            </div>
+		            <div class="block-content mb-100 ">
+		                <!--Row-->
+		                <div class="row">
+		                    <div class="col-md-12  ">
+		                        <div class="sub-title mb-40">
+		                            <h2 class="uppercase">Personal Info</h2>
+		                        </div>
+		                    </div>
+		                </div>
+		                <!--End row-->
+		                <!--Row-->
+		                <div class="row">
+		                    <!--Info-->
+		                    <div class="block-info ">
+		                        <div class="col-md-4">
+		                            <div class="info">
+		                                <div class="ico mb-20">
+		                                    <i class="icon-location-7"></i>
+		                                </div>
+		                                <h5 class="mb-20">Currently living in </h5>
+		                                <p> 895 University Drive <br> Kamloops, British Columbia <br></p>
+		                            </div>
+		                        </div>
+		                        <div class="col-md-4 ">
+		                            <div class="info">
+		                                <div class="ico mb-20">
+		                                    <i class="icon-mobile-6"></i>
+		                                </div>
+		                                <h5 class="mb-20">Give me a call</h5>
+		                                <p> Phone : + 1 250 682 8717 <br> <br></p>
+		                            </div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <div class="info">
+		                                <div class="ico mb-20">
+		                                    <i class="icon-paper-plane-3"></i>
+		                                </div>
+		                                <h5 class=" mb-20">Let's connect</h5>
+		                                <p> Email: <a href="#">Christythomas.95@outlook.com</a>
+		                                    <br> Linkedin : <a href="https://www.linkedin.com/in/christy95/">@Christy Thomas</a>
+		                                    <br> Github : <a href="https://github.com/ChristyThomas95">ChristyThomas95</a>
+		                                </p>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <!--End info-->
+		                </div>
+		                <!--End row-->
+		            </div>
+		            <!--End block content-->
+		            <!--Block content-->
+		            <div class="block-content mb-100 ">
+		                <!--Row-->
+		                <div class="row">
+		                    <div class="col-md-12  ">
+		                        <div class="sub-title mb-40">
+		                            <h2 class="uppercase">Reach Me here</h2>
+		                        </div>
+		                    </div>
+		                </div>
+		                <!--End row-->
+		                <!--Row-->
+		                <div class="row">
+		                    <div class="col-md-12">
+		                        <!--Reach-->
+		                        <div class="block-reach">
+		                            <form action="{% url 'contact'%}" class="contact-form" method="POST" enctype="mutlipart/form-data">
+										{% csrf_token %}
+		                                <!--Input columns-->
+		                                <div class="input-columns clearfix">
+		                                    <div class="column1">
+		                                        <div class="column-inner">
+		                                            <input type="text" placeholder="name" value="" id="name" name="name">
+		                                        </div>
+		                                    </div>
+		                                    <!--Column-->
+		                                    <div class="column2">
+		                                        <div class="column-inner">
+		                                            <input type="text" placeholder="email" value="" id="email" name="email">
+		                                        </div>
+		                                    </div>
+		                                    <!--End column-->
+		                                </div>
+		                                <!--End input columns-->
+		                                <input type="text" placeholder="Subject" value="" id="subject" name="subject">
+		                                <textarea name="message" placeholder="Message" id="message" cols="45" rows="7"></textarea>
+		                                <button type="submit" value="Submit Form" class="but opc submit">Submit</button>
+
+		                            </form>
+		                        </div>
+		                        <!--End reach-->
+		                    </div>
+		                </div>
+				
+		                <!--End row-->
+		            </div>
+					{% include 'includes/messages.html' %}
+		            <!--End block content-->
+		            <!--Block content-->
+		            <div class="block-content">
+		                <!--Row-->
+		                <div class="row">
+		                    <div class="col-md-12">
+		                        <span class="page-number emph-1">- 4/4 -</span>
+		                    </div>
+		                </div>
+		                <!--End row-->
+		            </div>
+		            <!--End block content-->
+		        </div>
+		        <!--End content-->
+		    </div>
+		    <!--End contact-->
+		</section>
+		<!--End contact tab-->
+		</div>
+		<!--End right content-->
+    </div>
+</div>	      
+{% endblock %}        
